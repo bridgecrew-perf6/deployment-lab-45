@@ -42,6 +42,10 @@ h1 {
     font-family: 'Nunito', sans-serif;
 }
 
+form #submit-form {
+    text-align: center;
+}
+
 
 
 
