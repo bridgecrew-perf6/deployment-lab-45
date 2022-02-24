@@ -1,3 +1,5 @@
+require
+
 document.forms["input-form"].onsubmit = () => {
     const firstName = document.getElementById("firstName").value
     const lastName = document.getElementById("lastName").value
@@ -9,4 +11,7 @@ Last Name: ${lastName}
 Email: ${email}
 Username: ${username}
 Password: ${password}`)
+}
+if (firstName === 'Mike') {
+    Rollbar.warning('Mike is almost not valid')
 }
