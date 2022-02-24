@@ -1,5 +1,3 @@
-require
-
 document.forms["input-form"].onsubmit = () => {
     const firstName = document.getElementById("firstName").value
     if (firstName === 'Mike') {
