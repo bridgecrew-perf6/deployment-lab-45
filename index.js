@@ -1,3 +1,5 @@
+Rollbar.log('linked to front')
+
 document.forms["input-form"].onsubmit = () => {
     const firstName = document.getElementById("firstName").value
     if (firstName === 'Mike') {
