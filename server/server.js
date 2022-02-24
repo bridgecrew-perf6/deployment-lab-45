@@ -26,6 +26,14 @@ app.get('/js', function (req, res) {
     res.sendFile(path.join(__dirname, '../index.js'))
 })
 
+try {
+    nonExistentFunction();
+} catch (error) {
+    console.error(error);
+    // expected output: ReferenceError: nonExistentFunction is not defined
+    // Note - error messages will vary depending on browser
+}
+
 const port = process.env.PORT || 4005
 
 app.listen(port, () => {
