@@ -29,10 +29,20 @@ app.get('/js', function (req, res) {
 try {
     nonExistentFunction();
 } catch (error) {
-    rollbar.error(error);
+    rollbar.error(`${nonExistentFunction} does not exist.`);
     // expected output: ReferenceError: nonExistentFunction is not defined
     // Note - error messages will vary depending on browser
 }
+
+try {
+    nonExistentFunctionTwo();
+} catch (error) {
+    rollbar.critical(`${nonExistentFunctionTwo} does not exist. CRITICAL`);
+    // expected output: ReferenceError: nonExistentFunction is not defined
+    // Note - error messages will vary depending on browser
+}
+
+
 
 const port = process.env.PORT || 4005
 
